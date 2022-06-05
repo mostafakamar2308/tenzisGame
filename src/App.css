@@ -1,38 +1,69 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
+  background-color: #0b2434;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#game {
+  border-radius: 15px;
+  width: 55vw;
+  height: 80vh;
+  color: #2b283a;
+  font-weight: bold;
+  font-size: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #d5d1d1;
+  justify-content: space-around;
+  align-items: center;
+}
+.details {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  column-gap: 20px;
+  row-gap: 20px;
+}
+.cube {
+  box-sizing: content-box;
+  background-color: white;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.freeze {
+  background-color: #59e391;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.Winning {
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.roll,
+.replay {
+  background-color: #5035ff;
+  box-shadow: 0px 3.2px 7.68px rgba(0, 0, 0, 0.18);
+  border-radius: 3.81277px;
+  padding: 1rem 2rem;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  border: none;
+  cursor: pointer;
 }
